@@ -139,7 +139,7 @@ $$\begin{split}\pmb{S}'&=\sum_{k=1}^n(\pmb{x}_k-\pmb{\mu})(\pmb{x}_k-\pmb{\mu})^
 
 $$\begin{split}s_{11}'&=(x_{11}-\mu_1)^2+(x_{21}-\mu_1)^2+\cdots+(x_{n1}-\mu_1)^2\\s_{12}'&=(x_{11}-\mu_1)(x_{12}-\mu_2)+(x_{21}-\mu_1)(x_{22}-\mu_2)+\cdots+(x_{n1}-\mu_1)(x_{n2}-\mu_2)\\&\vdots\\s_{1p}'&=(x_{11}-\mu_1)(x_{1p}-\mu_p)+(x_{21}-\mu_1)(x_{2p}-\mu_p)+\cdots+(x_{n1}-\mu_1)(x_{np}-\mu_p)\\s_{21}'&=(x_{12}-\mu_2)(x_{11}-\mu_1)+(x_{22}-\mu_2)(x_{21}-\mu_1)+\cdots+(x_{n2}-\mu_2)(x_{n1}-\mu_1)\\s_{22}'&=(x_{12}-\mu_2)^2+(x_{22}-\mu_2)^2+\cdots+(x_{n2}-\mu_2)^2\\&\vdots\\s_{2p}'&=(x_{12}-\mu_2)(x_{1p}-\mu_p)+(x_{22}-\mu_2)(x_{2p}-\mu_p)+\cdots+(x_{n2}-\mu_2)(x_{np}-\mu_p)\\&\vdots\\s_{p1}'&=(x_{1p}-\mu_p)(x_{11}-\mu_1)+(x_{2p}-\mu_p)(x_{21}-\mu_1)+\cdots+(x_{np}-\mu_p)(x_{n1}-\mu_1)\\s_{p2}'&=(x_{1p}-\mu_p)(x_{12}-\mu_2)+(x_{2p}-\mu_p)(x_{22}-\mu_2)+\cdots+(x_{np}-\mu_p)(x_{n2}-\mu_2)\\&\vdots\\s_{pp}'&=(x_{1p}-\mu_p)^2+(x_{2p}-\mu_p)^2+\cdots+(x_{np}-\mu_p)^2\end{split}$$
 
-显然，矩阵 $\pmb{S}'$ 的第 $$i$$ 行第 $$j$$ 列元素 $$s_{ij}'$$ 为：
+显然，矩阵 $$\pmb{S}'$$ 的第 $$i$$ 行第 $$j$$ 列元素 $$s_{ij}'$$ 为：
 
 $$\begin{split}s_{ij}'&=(x_{1i}-\mu_i)(x_{1j}-\mu_j)+(x_{2i}-\mu_i)(x_{2j}-\mu_j)+\cdots+(x_{ni}-\mu_i)(x_{nj}-\mu_j)\\&=\sum_{k=1}^n(x_{ki}-\mu_i)(x_{kj}-\mu_j)\end{split}$$
 

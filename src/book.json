@@ -18,7 +18,8 @@
     "copy-code-button",
     "copyright",
     "icp",
-    "mathjax-pro"
+    "mathjax-pro",
+    "image-captions"
   ],
   "pluginsConfig": {
     "simple-page-toc": {
@@ -29,10 +30,10 @@
       "site": "http://math.itdiffer.com",
       "author": "老齐",
       "website": "机器学习",
-      "image": "http://math.itdiffer.com/images/0.jpg",
       "copyProtect": true
     },
     "icp": {
+      "label": "",
       "number": "苏ICP备13034293号-2",
       "link": "https://beian.miit.gov.cn/"
     }

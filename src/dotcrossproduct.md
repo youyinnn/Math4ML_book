@@ -4,7 +4,7 @@
 
 以上这些内容，在不同资料中，所用术语的含义会有所差别，读者阅读的时候，不妨注意，一般资料中，**都是在欧几里得空间探讨有关问题，并且是在三维的欧氏空间中**，其实质所指即相同。但是，如果不是在欧氏空间中，各概念、术语则不能混用。
 
-下面从数学史的角度，参考有关文献，阐述 $\mathbb{R}^3$ 空间中点积和叉积的内容，目的借此深入理解《机器学习数学基础》中有关概念。
+下面从数学史的角度，参考有关文献，阐述 $$\mathbb{R}^3$$ 空间中点积和叉积的内容，目的借此深入理解《机器学习数学基础》中有关概念。
 
 再次强调，以下讨论，是在**三维欧几里得空间**。
 
@@ -16,7 +16,7 @@
 
 威廉·卢云·哈密顿爵士（英語：Sir William Rowan Hamilton，1805年8月4日－1865年9月2日），爱尔兰数学家、物理学家和天文学家。
 
-“哈密顿”这个名称，在物理学中经常会见到，因为哈密顿在1833年建立了经典力学的重新表述（与之对应的另外一个表述是拉格朗日力学）$^{[4]}$ ，并且此成果也被应用在量子力学中。
+“哈密顿”这个名称，在物理学中经常会见到，因为哈密顿在1833年建立了经典力学的重新表述（与之对应的另外一个表述是拉格朗日力学）$$^{[4]}$$ ，并且此成果也被应用在量子力学中。
 
 在数学方面，哈密顿最著名的贡献在于发现了**四元数**，在如今的计算机图形学、控制理论、信号处理、轨道力学等领域，都有四元数的应用。
 
@@ -30,9 +30,9 @@
 
 ### 1.2 四元数定义
 
-在复数 $z=a+bi$ 中，虚数单位 $i^2 = -1$ ，每个复数都可以视为平面上的一个点。
+在复数 $$z=a+bi$$ 中，虚数单位 $$i^2 = -1$$ ，每个复数都可以视为平面上的一个点。
 
-在三维欧几里得空间中，每个点可以用一个有序数 $(a,b,c)$ 表示，这些点之间可以进行加法运算，但能不能做乘法运算？这个问题哈密顿也曾思考。据记载$^{[6]}$ ，1843年10月16日，哈密顿与夫人在运河边散步，经过一座桥，突然领悟到了四元数的定义，现在那座桥旁还立有石碑。
+在三维欧几里得空间中，每个点可以用一个有序数 $$(a,b,c)$$ 表示，这些点之间可以进行加法运算，但能不能做乘法运算？这个问题哈密顿也曾思考。据记载$$^{[6]}$$ ，1843年10月16日，哈密顿与夫人在运河边散步，经过一座桥，突然领悟到了四元数的定义，现在那座桥旁还立有石碑。
 
 ![](./images/images/2021-4-6/1617670752508-William.jpg)
 
@@ -41,17 +41,17 @@
 > 石碑上的内容如下：
 >
 > >  Here as he walked by on the 16th of October 1843 Sir William Rowan Hamilton in a flash of genius discovered the fundamental formula for quaternion multiplication
-> > $i^2 = j^2 = k^2 = ijk = −1$
+> > $$i^2 = j^2 = k^2 = ijk = −1$$
 > > & cut it on a stone of this bridge.
 
-每个四元数（quaternion）都是 $1,i,j,k$ 的线性组合，即一个四元数表示为：
+每个四元数（quaternion）都是 $$1,i,j,k$$ 的线性组合，即一个四元数表示为：
 
 $$
 a+bi+cj+dk
 $$
 
 
-其中，$i^2=j^2=k^2=ijk=-1$ ，$a,b,c,d$ 是实数。
+其中，$$i^2=j^2=k^2=ijk=-1$$ ，$$a,b,c,d$$ 是实数。
 
 四元数加法，与向量加法类似：
 
@@ -62,23 +62,23 @@ $$
 
 ### 1.3 四元数乘法
 
-根据四元数定义中规定的 $i^2=j^2=k^2=ijk=-1$ ，可以进行虚数单位间的乘法计算，例如：
+根据四元数定义中规定的 $$i^2=j^2=k^2=ijk=-1$$ ，可以进行虚数单位间的乘法计算，例如：
 
-- $ijk = -1$ ，右乘 $k$ ，得：$ijk^2=ij(-1)=-ij=-k$ ，即 $ij=k$ 。
-- $ijk = -1$ ，左乘 $i$ ，得：$i^2jk=(-1)jk=-jk=-i$ ，即 $jk=i$ 。
-- 根据 $jk=i$ ，左乘 $j$ ，得：$j^2k=ji$ ，即 $-k=ji$ 。
+- $$ijk = -1$$ ，右乘 $$k$$ ，得：$$ijk^2=ij(-1)=-ij=-k$$ ，即 $$ij=k$$ 。
+- $$ijk = -1$$ ，左乘 $$i$$ ，得：$$i^2jk=(-1)jk=-jk=-i$$ ，即 $$jk=i$$ 。
+- 根据 $$jk=i$$ ，左乘 $$j$$ ，得：$$j^2k=ji$$ ，即 $$-k=ji$$ 。
 - ......
 
 可以得到如下乘法表：
 
-| .    | $1$  | $i$  | $j$  | $k$  |
+| .    | $$1$$  | $$i$$  | $$j$$  | $$k$$  |
 | ---- | ---- | ---- | ---- | ---- |
-| $1$  | $1$  | $i$  | $j$  | $k$  |
-| $i$  | $i$  | $-1$ | $k$  | $-j$ |
-| $j$  | $j$  | $-k$ | $-1$ | $i$  |
-| $k$  | $k$  | $j$  | $-i$ | $-1$ |
+| $$1$$  | $$1$$  | $$i$$  | $$j$$  | $$k$$  |
+| $$i$$  | $$i$$  | $$-1$$ | $$k$$  | $$-j$$ |
+| $$j$$  | $$j$$  | $$-k$$ | $$-1$$ | $$i$$  |
+| $$k$$  | $$k$$  | $$j$$  | $$-i$$ | $$-1$$ |
 
-从上表中会发现，四元数的乘法显然不满足交换律，比如 $ij=k$ ，而 $ji=-k$ 。
+从上表中会发现，四元数的乘法显然不满足交换律，比如 $$ij=k$$ ，而 $$ji=-k$$ 。
 
 两个四元数相乘：
 
@@ -101,17 +101,17 @@ $$
 $$
 
 
-此向量空间的基为 $\{1,i,j,k\}$ 。
+此向量空间的基为 $$\{1,i,j,k\}$$ 。
 
 ### 1.4 共轭和逆
 
-设 $q=a+bi+cj+dk$ ，
+设 $$q=a+bi+cj+dk$$ ，
 
-- 四元数的共轭定义为：$q^*=a-bi-cj-dk$ 。
+- 四元数的共轭定义为：$$q^*=a-bi-cj-dk$$ 。
 
-- 绝对值（模，长度，norm）：$|q|=\sqrt{qq^*}=\sqrt{q^*q}=\sqrt{a^2+b^2+c^2+d^2}$  （此处使用了 $qq^*=q^*q$ 结论，证明见后续内容 ）
+- 绝对值（模，长度，norm）：$$|q|=\sqrt{qq^*}=\sqrt{q^*q}=\sqrt{a^2+b^2+c^2+d^2}$$  （此处使用了 $$qq^*=q^*q$$ 结论，证明见后续内容 ）
 
-- $q_1,q_2\in\mathbb{H}$ ，则 $(q_1q_2)^*=q_2^*q_1^*$ ，且 $|q_1q_2|=|q_1||q_2|$ 。
+- $$q_1,q_2\in\mathbb{H}$$ ，则 $$(q_1q_2)^*=q_2^*q_1^*$$ ，且 $$|q_1q_2|=|q_1||q_2|$$ 。
 
   **证明**
 
@@ -119,7 +119,7 @@ $$
   \begin{split}|q_1q_2|^2 &= (q_1q_2)(q_1q_2)^*\\ &= q_1q_2q_2^*q_1^*\\&=q_1|q_2|^2q_1^*\\&=q_1q_1^*|q_2|^2\\&=|q_1|^2|q_2|^2\end{split}
   $$
   
-- 若 $q\ne 0$ ，定义逆元：$q^{-1}=\frac{q^*}{|q|^2}$
+- 若 $$q\ne 0$$ ，定义逆元：$$q^{-1}=\frac{q^*}{|q|^2}$$
 
   **验证**
 
@@ -128,20 +128,20 @@ $$
   $$
   
   
-  若 $|q|=1$ ，即 $q$ 是单位四元数，则 $q^{-1}=q^*$ 。
+  若 $$|q|=1$$ ，即 $$q$$ 是单位四元数，则 $$q^{-1}=q^*$$ 。
 
 ### 1.5 四元数表示：标量-向量
 
-令 $\pmb{i,j,k}$ 是 $\mathbb{R}^3$ 的单位向量（标准正交基），四元数 $q=a+bi+cj+dk$ 可以表示为：
+令 $$\pmb{i,j,k}$$ 是 $$\mathbb{R}^3$$ 的单位向量（标准正交基），四元数 $$q=a+bi+cj+dk$$ 可以表示为：
 
 $$
 q=a+\pmb{v}
 $$
 
 
-其中 $a\in\mathbb{R}$ ，$\pmb{v} = b\pmb{i}+c\pmb{j}+d\pmb{k}\in\mathbb{R}^3$ ，且 $\pmb{i}^2=\pmb{j}^2=\pmb{k}^2=\pmb{ijk}=-1$ 。
+其中 $$a\in\mathbb{R}$$ ，$$\pmb{v} = b\pmb{i}+c\pmb{j}+d\pmb{k}\in\mathbb{R}^3$$ ，且 $$\pmb{i}^2=\pmb{j}^2=\pmb{k}^2=\pmb{ijk}=-1$$ 。
 
-1878年，英国数学家 William Kingdon Clifford$^{[7]}$ 使用上述表示方式，计算两个四元数的乘积：
+1878年，英国数学家 William Kingdon Clifford$$^{[7]}$$ 使用上述表示方式，计算两个四元数的乘积：
 
 $$
 q_1q_2=(a_1+\pmb{v}_1)(a_2+\pmb{v}_2)=(a_1a_2-\pmb{v}_1\cdot\pmb{v}_2)+(a_1\pmb{v}_2+a_2\pmb{v}_1+\pmb{v}_1\times\pmb{v}_2) \tag{1.2}
@@ -178,7 +178,7 @@ $$
 
 《机器学习数学基础》第4章4.1.1节中定义叉积，使用的是最常规的几何方法，下面根据参考文献 [8]，从行列式角度来理解叉积。
 
-设 $\pmb{A}=[\pmb{a}\quad\pmb{b}\quad\pmb{c}]$ ，有：$\langle\pmb{a}\times\pmb{b},\pmb{c}\rangle=\det(\pmb{a},\pmb{b},\pmb{c})\tag{2.1}$
+设 $$\pmb{A}=[\pmb{a}\quad\pmb{b}\quad\pmb{c}]$$ ，有：$$\langle\pmb{a}\times\pmb{b},\pmb{c}\rangle=\det(\pmb{a},\pmb{b},\pmb{c})\tag{2.1}$$
 
 又因为：
 
@@ -196,7 +196,7 @@ $$
 
 ### 2.1 用行列式证明叉积性质
 
-- 数量乘法结合律：$(k\pmb{a})\times\pmb{b}=\pmb{a}\times(k\pmb{b})=k(\pmb{a}\times\pmb{b})$
+- 数量乘法结合律：$$(k\pmb{a})\times\pmb{b}=\pmb{a}\times(k\pmb{b})=k(\pmb{a}\times\pmb{b})$$
 
   $$
   \det(k\pmb{a},\pmb{b},\pmb{c})=\det(\pmb{a},k\pmb{b},\pmb{c})=k\det(\pmb{a},\pmb{b},\pmb{c})
@@ -210,9 +210,9 @@ $$
   $$
   
 
-  $\pmb{c}$ 为任一向量
+  $$\pmb{c}$$ 为任一向量
 
-- 加法分配律：$\pmb{a}\times(\pmb{x}+\pmb{y})=\pmb{a}\times\pmb{x}+\pmb{a}\times\pmb{y},(\pmb{x}+\pmb{y})\times\pmb{b}=\pmb{x}\times\pmb{b}+\pmb{y}\times\pmb{b}$
+- 加法分配律：$$\pmb{a}\times(\pmb{x}+\pmb{y})=\pmb{a}\times\pmb{x}+\pmb{a}\times\pmb{y},(\pmb{x}+\pmb{y})\times\pmb{b}=\pmb{x}\times\pmb{b}+\pmb{y}\times\pmb{b}$$
 
   $$
   \det(\pmb{a},\pmb{x}+\pmb{y},\pmb{c})=\det(\pmb{a},\pmb{x},\pmb{c})+\det(\pmb{a},\pmb{y},\pmb{c})
@@ -225,7 +225,7 @@ $$
 
   利用前面的性质，得证。
 
-- 正交：$\langle\pmb{a}\times\pmb{b},\pmb{a}\rangle=0$ 且 $\langle\pmb{a}\times\pmb{b},\pmb{b}\rangle=0$ ，即 $\pmb{a}\times\pmb{b}\bot\pmb{a}$ 且 $\pmb{a}\times\pmb{b}\bot\pmb{b}$
+- 正交：$$\langle\pmb{a}\times\pmb{b},\pmb{a}\rangle=0$$ 且 $$\langle\pmb{a}\times\pmb{b},\pmb{b}\rangle=0$$ ，即 $$\pmb{a}\times\pmb{b}\bot\pmb{a}$$ 且 $$\pmb{a}\times\pmb{b}\bot\pmb{b}$$
 
   若行列式中有相同的两行，则行列式值等于零。所以：
 
@@ -237,7 +237,7 @@ $$
   \langle\pmb{a}\times\pmb{b},\pmb{b}\rangle=\det(\pmb{a},\pmb{b},\pmb{b})=0
   $$
   
-- 反对称性：$\pmb{a}\times\pmb{b}=-\pmb{b}\times\pmb{a}$
+- 反对称性：$$\pmb{a}\times\pmb{b}=-\pmb{b}\times\pmb{a}$$
 
   行列式的两行互相交换，行列式值更改符号，所以：
 
@@ -245,7 +245,7 @@ $$
   \langle\pmb{a}\times\pmb{b},\pmb{c}\rangle=\det(\pmb{a},\pmb{b},\pmb{c})=-\det(\pmb{b},\pmb{a},\pmb{c})=-\langle\pmb{b}\times\pmb{a},\pmb{c}\rangle=\langle-\pmb{b}\times\pmb{a},\pmb{c}\rangle
   $$
   
-- 循环不变性：$\langle\pmb{a}\times\pmb{b},\pmb{c}\rangle=\langle\pmb{b}\times\pmb{c},\pmb{a}\rangle=\langle\pmb{c}\times\pmb{a},\pmb{b}\rangle$
+- 循环不变性：$$\langle\pmb{a}\times\pmb{b},\pmb{c}\rangle=\langle\pmb{b}\times\pmb{c},\pmb{a}\rangle=\langle\pmb{c}\times\pmb{a},\pmb{b}\rangle$$
 
   行列式，交换两行两次，值不变。所以：
 
@@ -253,25 +253,25 @@ $$
   \det(\pmb{a},\pmb{b},\pmb{c})=\det(\pmb{b},\pmb{c},\pmb{a})=\det(\pmb{c},\pmb{a},\pmb{b})
   $$
   
-- 拉格朗日等式：$\begin{Vmatrix}\pmb{a}\times\pmb{b}\end{Vmatrix}^2=\begin{Vmatrix}\pmb{a}\end{Vmatrix}^2\begin{Vmatrix}\pmb{b}\end{Vmatrix}^2-\langle\pmb{a},\pmb{b}\rangle^2$
+- 拉格朗日等式：$$\begin{Vmatrix}\pmb{a}\times\pmb{b}\end{Vmatrix}^2=\begin{Vmatrix}\pmb{a}\end{Vmatrix}^2\begin{Vmatrix}\pmb{b}\end{Vmatrix}^2-\langle\pmb{a},\pmb{b}\rangle^2$$
 
-  设 $\pmb{p}=\pmb{a}\times\pmb{b}$ ，使用行列式可乘公式和上面的正交性：
+  设 $$\pmb{p}=\pmb{a}\times\pmb{b}$$ ，使用行列式可乘公式和上面的正交性：
 
   $$
   \begin{split}\langle\pmb{a}\times\pmb{b},\pmb{p}\rangle^2 &= |\pmb{a}\quad\pmb{b}\quad\pmb{p}|^2=\begin{vmatrix}\pmb{a}^T\\\pmb{b}^T\\\pmb{p}^T\end{vmatrix}\begin{vmatrix}\pmb{a}&\pmb{b}&\pmb{p}\end{vmatrix}\\ &= \begin{vmatrix}\begin{Vmatrix}\pmb{a}\end{Vmatrix}^2&\langle\pmb{a},\pmb{b}\rangle&0\\\langle\pmb{b},\pmb{a}\rangle&\begin{Vmatrix}\pmb{b}\end{Vmatrix}^2&0\\0&0&\begin{Vmatrix}\pmb{p}\end{Vmatrix}^2\end{vmatrix}\\ &= \begin{Vmatrix}\pmb{p}\end{Vmatrix}^2(\begin{Vmatrix}\pmb{a}\end{Vmatrix}^2\begin{Vmatrix}\pmb{b}\end{Vmatrix}^2-\langle\pmb{a},\pmb{b}\rangle^2)\end{split}
   $$
   
   
-  又因为 $\langle\pmb{a}\times\pmb{b},\pmb{p}\rangle=\begin{Vmatrix}\pmb{a}\times\pmb{b}\end{Vmatrix}^2=\begin{Vmatrix}\pmb{p}\end{Vmatrix}^2$
+  又因为 $$\langle\pmb{a}\times\pmb{b},\pmb{p}\rangle=\begin{Vmatrix}\pmb{a}\times\pmb{b}\end{Vmatrix}^2=\begin{Vmatrix}\pmb{p}\end{Vmatrix}^2$$
 
-如果，将 $\langle\pmb{a},\pmb{b}\rangle=\begin{Vmatrix}\pmb{a}\end{Vmatrix}\begin{Vmatrix}\pmb{b}\end{Vmatrix}\cos\theta$ 代入拉格朗日等式，可得：
+如果，将 $$\langle\pmb{a},\pmb{b}\rangle=\begin{Vmatrix}\pmb{a}\end{Vmatrix}\begin{Vmatrix}\pmb{b}\end{Vmatrix}\cos\theta$$ 代入拉格朗日等式，可得：
 
 $$
 \begin{Vmatrix}\pmb{a}\times\pmb{b}\end{Vmatrix}^2=\begin{Vmatrix}\pmb{a}\end{Vmatrix}^2\begin{Vmatrix}\pmb{b}\end{Vmatrix}^2(1-\cos^2\theta)=\begin{Vmatrix}\pmb{a}\end{Vmatrix}^2\begin{Vmatrix}\pmb{b}\end{Vmatrix}^2\sin^2\theta
 $$
 
 
-即得：$\begin{Vmatrix}\pmb{a}\times\pmb{b}\end{Vmatrix}=\begin{Vmatrix}\pmb{a}\end{Vmatrix}\begin{Vmatrix}\pmb{b}\end{Vmatrix}|\sin\theta|$ 。
+即得：$$\begin{Vmatrix}\pmb{a}\times\pmb{b}\end{Vmatrix}=\begin{Vmatrix}\pmb{a}\end{Vmatrix}\begin{Vmatrix}\pmb{b}\end{Vmatrix}|\sin\theta|$$ 。
 
 
 

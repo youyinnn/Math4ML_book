@@ -10,19 +10,19 @@
 
 ----
 
-设 $\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_n\}$（ $\pmb{\alpha}_i$ 表示列向量） 是某个向量空间的一个基，则该空间中一个向量 $\overrightarrow{OA}$ 可以描述为：
+设 $$\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_n\}$$（ $$\pmb{\alpha}_i$$ 表示列向量） 是某个向量空间的一个基，则该空间中一个向量 $$\overrightarrow{OA}$$ 可以描述为：
 
 $$
 \overrightarrow{OA} = x_1\pmb{\alpha}_1 + \cdots + x_n\pmb{\alpha}_n\tag{1.3.4}
 $$
-其中的 $(x_1, \cdots, x_n)$ 即为向量 $\overrightarrow{OA}$ 在基 $\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_n\}$ 的**坐标**。
+其中的 $$(x_1, \cdots, x_n)$$ 即为向量 $$\overrightarrow{OA}$$ 在基 $$\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_n\}$$ 的**坐标**。
 
-如果有另外一个基 $\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$（ $\pmb{\beta}_i$ 表示列向量），向量 $\overrightarrow{OA}$ 又描述为：
+如果有另外一个基 $$\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$$（ $$\pmb{\beta}_i$$ 表示列向量），向量 $$\overrightarrow{OA}$$ 又描述为：
 
 $$
 \overrightarrow{OA} = x_1'\pmb{\beta}_1 + \cdots + x_n'\pmb{\beta}_n\tag{1.3.5}
 $$
-那么，同一个向量空间的这两个基有没有关系呢？有。不要忘记，基是一个向量组，例如基 $\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$ 中的每个向量也在此向量空间，所以可以用基 $\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_n\}$ 线性表出，即：
+那么，同一个向量空间的这两个基有没有关系呢？有。不要忘记，基是一个向量组，例如基 $$\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$$ 中的每个向量也在此向量空间，所以可以用基 $$\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_n\}$$ 线性表出，即：
 
 $$
 \begin{cases}\begin{split}\pmb{\beta}_1 &= b_{11}\pmb{\alpha}_1 + \cdots + b_{n1}\pmb{\alpha}_n \\ \vdots  \\\pmb{\beta}_n &= b_{1n}\pmb{\alpha}_1 + \cdots + b_{nn}\pmb{\alpha}_n \end{split}\end{cases}
@@ -37,9 +37,9 @@ $$
 $$
 \pmb P = \begin{bmatrix}b_{11} & \cdots & b_{1n}\\\vdots\\b_{n1} & \cdots &b_{nn}\end{bmatrix}
 $$
-称为基 $\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_n\}$ 向基 $\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$ 的**过渡矩阵**。显然，过渡矩阵实现了一个基向另一个基的变换。
+称为基 $$\{\pmb{\alpha}_1, \cdots, \pmb{\alpha}_n\}$$ 向基 $$\{\pmb{\beta}_1, \cdots, \pmb{\beta}_n\}$$ 的**过渡矩阵**。显然，过渡矩阵实现了一个基向另一个基的变换。
 
-> **定义** 在同一个向量空间，由基 $\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$ 向基 $\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$ 的过渡矩阵是 $\pmb{P}$ ，则：
+> **定义** 在同一个向量空间，由基 $$$\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$$$ 向基 $$$\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$$$ 的过渡矩阵是 $$$\pmb{P}$$$ ，则：
 >$$
 > [\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n] = [\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n]\pmb P
 >$$
@@ -61,7 +61,7 @@ $$
 $$
 表示了在同一个向量空间中，向量在不同基下的坐标之间的变换关系，我们称为**坐标变换公式**。
 
-> **定义** 在某个向量空间中，由基 $$\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$$ 向基 $$\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$$ 的过渡矩阵是 $$\pmb{P}$$ 。某向量在基 $$\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$$ 的坐标是 $$\pmb{x}=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix} $$，在基 $$\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$$ 的坐标是 $$\pmb x'=\begin{bmatrix}x_1'\\\vdots \\x_n'\end{bmatrix}$$，这两组坐标之间的关系是：
+> **定义** 在某个向量空间中，由基 $$$$\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$$$$ 向基 $$$$\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$$$$ 的过渡矩阵是 $$$$\pmb{P}$$$$ 。某向量在基 $$$$\{\pmb{\alpha}_1\quad\cdots\quad\pmb{\alpha}_n\}$$$$ 的坐标是 $$\pmb{x}=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix} $$，在基 $$$$\{\pmb{\beta}_1\quad\cdots\quad\pmb{\beta}_n\}$$$$ 的坐标是 $$\pmb x'=\begin{bmatrix}x_1'\\\vdots \\x_n'\end{bmatrix}$$，这两组坐标之间的关系是：
 > 
 > $$
 > \pmb x = \pmb P \pmb x'

@@ -1,11 +1,5 @@
 # 回归分析
 
-$a^b$
-
-$$
-    y = x + b
-$$
-
 - 回归分析（regression analysis）：利用一个变量或一组变量的变化来估计或预测另一个变量或另一组变量的变化情况。
 - 线性回归模型（linear regression model）：变量之间存在线性关系的回归模型。
 - 回归线（regression line）：用来代表散点图上分布趋势的直线。

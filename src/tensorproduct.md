@@ -1,14 +1,14 @@
 # 张量和张量积
 
-*打开本页，如果没有显示公式，请刷新页面。*
+_打开本页，如果没有显示公式，请刷新页面。_
 
-《机器学习数学基础》第4章4.1.2节介绍了张量和张量积
+《机器学习数学基础》第 4 章 4.1.2 节介绍了张量和张量积
 
 **张量积**（tensor product），又称**克罗内克积**（Kronecker product）。
 
-利奥波德·克罗内克（德语：Leopold Kronecker，1823年12月7日－1891年12月29日），德国数学家与逻辑学家，出生于西里西亚利格尼茨（现属波兰的莱格尼察），卒于柏林。他认为算术与数学分析都必须以整数为基础，他曾说：“**上帝创造了整数，其余都是人做的工作**”（Bell 1986, 477页）。这与数学家格奥尔格·康托尔的观点相互对立。克罗内克是恩斯特·库默尔的学生和终身挚友$$^{[1]}$$。 
+利奥波德·克罗内克（德语：Leopold Kronecker，1823 年 12 月 7 日－1891 年 12 月 29 日），德国数学家与逻辑学家，出生于西里西亚利格尼茨（现属波兰的莱格尼察），卒于柏林。他认为算术与数学分析都必须以整数为基础，他曾说：“**上帝创造了整数，其余都是人做的工作**”（Bell 1986, 477 页）。这与数学家格奥尔格·康托尔的观点相互对立。克罗内克是恩斯特·库默尔的学生和终身挚友$$^{[1]}$$。
 
-![](./images/images/2021-3-8/1615186861656-Leopold_Kronecker_1865.jpg)
+![Leopold_Kronecker_1865](./images/images/2021-3-8/1615186861656-Leopold_Kronecker_1865.jpg)
 
 ## 张量积定义
 
@@ -96,15 +96,11 @@ $$(\pmb{I}_m\bigotimes\pmb{B})(\pmb{x}_i\bigotimes\pmb{y}_j)=\mu_i(\pmb{x}_i\big
 
 $$(\pmb{A}\bigotimes\pmb{I}_n+\pmb{I}_m\bigotimes\pmb{B})(\pmb{x}_i\bigotimes\pmb{y}_j)=(\lambda_i+\mu_j)(\pmb{x}_i\bigotimes\pmb{y}_j)$$
 
-根据：矩阵特征值之和等于迹，特征值之积等于行列式（见《机器学习数学基础》第3章3.1.2节），有：
+根据：矩阵特征值之和等于迹，特征值之积等于行列式（见《机器学习数学基础》第 3 章 3.1.2 节），有：
 
 $$Tr(\pmb{A}\bigotimes\pmb{B})=\sum_{i=1}^m\sum_{j=1}^n\lambda_i\mu_j=\left(\sum_{i=1}^m\lambda_i\right)\left(\sum_{j=1}^n\right)=Tr(\pmb{A})\cdot Tr(\pmb{B})$$
 
 $$|\pmb{A}\bigotimes\pmb{B}|=\prod_{1\le i\le m,1\le{j}\le{n}}\lambda_i\mu_j=\left(\prod_{i=1}^m\lambda_i\right)^n(\prod_{j=1}^n\mu_j)^m=|\pmb{A}|^n|\pmb{B}|^m$$
-
-
-
-
 
 ## 参考文献
 
