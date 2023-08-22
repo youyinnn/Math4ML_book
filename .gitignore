@@ -1,9 +1,4 @@
- _book/
-/_book/
-/_book/*
+_book
 .DS_Store
-node_modules/
-/node_modules/
-/node_modules/*
-/.ipynb_checkpoints/
-/.ipynb_checkpoints/*
+node_modules
+.ipynb_checkpoints

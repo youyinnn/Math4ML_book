@@ -1,0 +1,31 @@
+{
+  "name": "math4ml_book",
+  "version": "1.0.0",
+  "description": "<img src=\"./images/math4ML.png\" style=\"zoom: 33%;\" />",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youyinnn/Math4ML_book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youyinnn/Math4ML_book/issues"
+  },
+  "homepage": "https://github.com/youyinnn/Math4ML_book#readme",
+  "devDependencies": {
+    "gitbook-plugin-copy-code-button": "^0.0.2",
+    "gitbook-plugin-copyright": "^0.4.1",
+    "gitbook-plugin-expandable-chapters-small": "^0.1.7",
+    "gitbook-plugin-fontsettings": "^2.0.0",
+    "gitbook-plugin-icp": "^0.2.1",
+    "gitbook-plugin-mathjax-pro": "^0.0.6",
+    "gitbook-plugin-simple-page-toc": "^0.1.2",
+    "honkit": "^5.0.0",
+    "mathjax": "^2.7.9"
+  }
+}
